@@ -62,6 +62,11 @@ h4 { font-size: 1rem; font-weight: 600; }
 .btn-ghost { border-color: currentColor; color: inherit; background: transparent; }
 .btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
 .btn-sm { padding: 8px 16px; font-size: 0.85rem; }
+.btn-outline { border-color: var(--border); color: var(--text); background: var(--card); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.about-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.footer-link { color: var(--accent); }
+.footer-link:hover { text-decoration: underline; }
 
 .icon-btn {
   display: grid; place-items: center;
