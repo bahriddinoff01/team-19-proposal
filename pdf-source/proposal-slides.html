@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AI Travel Planner — Team 19 Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+<style>
+  @page { size: 13.333in 7.5in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "DM Sans", sans-serif; color: #e8ecf4; background: #0b1120; }
+  .slide {
+    width: 13.333in; height: 7.5in; position: relative; overflow: hidden;
+    padding: 0.8in 0.9in; page-break-after: always; break-after: page;
+    background: radial-gradient(circle at 85% 10%, rgba(59,130,246,0.18), transparent 45%), #0b1120;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .photo { background-size: cover; background-position: center; }
+  .photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,10,25,.55), rgba(5,10,25,.85)); }
+  .photo > * { position: relative; }
+  h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.1; }
+  h1 { font-size: 72pt; }
+  h2 { font-size: 36pt; margin-bottom: 28px; }
+  h3 { font-size: 17pt; margin-bottom: 6px; }
+  p, li { font-size: 14pt; line-height: 1.5; color: #b8c3d9; }
+  .kicker { font-size: 11pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #60a5fa; margin-bottom: 12px; display: block; }
+  .pill { display: inline-block; padding: 6px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.1); font-size: 11pt; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+  .num { position: absolute; right: .9in; bottom: .5in; font-size: 10pt; color: #5b6b8a; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .card { background: #131c31; border: 1px solid #1f2a44; border-radius: 18px; padding: 26px; }
+  .card .ic { font-size: 26pt; margin-bottom: 12px; }
+  .card p { font-size: 12.5pt; }
+  .step { width: 44px; height: 44px; border-radius: 50%; background: #2563eb; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15pt; margin-bottom: 16px; }
+  .avatar { width: 90px; height: 90px; border-radius: 50%; display: grid; place-items: center; font-family: Fraunces, serif; font-size: 30pt; color: #fff; margin-bottom: 18px; }
+  .role { display: inline-block; margin: 8px 0 12px; padding: 4px 14px; border-radius: 999px; background: rgba(59,130,246,.18); color: #93c5fd; font-size: 11pt; font-weight: 600; }
+  .shot { width: 100%; border-radius: 14px; border: 1px solid #1f2a44; box-shadow: 0 20px 50px -20px rgba(0,0,0,.8); }
+  .tl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; margin-top: 30px; }
+  .tl::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: linear-gradient(90deg, #3b82f6, #8b5cf6); }
+  .tl .dot { width: 24px; height: 24px; border-radius: 50%; background: #0b1120; border: 5px solid #3b82f6; position: relative; margin-bottom: 20px; }
+  .when { font-size: 10.5pt; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #60a5fa; }
+  .arch { display: flex; align-items: center; gap: 18px; margin-top: 36px; }
+  .arch .box { flex: 1; text-align: center; background: #131c31; border: 1px solid #2563eb; border-radius: 16px; padding: 22px 12px; }
+  .arch .box b { display: block; font-size: 15pt; color: #fff; }
+  .arch .box span { font-size: 11pt; color: #94a0b8; }
+  .arrow { color: #60a5fa; font-size: 22pt; }
+  .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .tags span { padding: 8px 16px; border-radius: 999px; background: #131c31; border: 1px solid #1f2a44; font-size: 12pt; color: #e8ecf4; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 10px; }
+  b, strong { color: #e8ecf4; }
+</style>
+</head>
+<body>
+
+<!-- 1. Cover -->
+<section class="slide photo" style="background-image:url('../assets/japan.jpg'); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+  <span class="pill">Team 19 · Project Proposal</span>
+  <h1 style="margin:28px 0 14px;">AI Travel Planner</h1>
+  <p style="font-size:20pt; color:#dbe4f3;">Plan smarter. Travel further.</p>
+  <p style="margin-top:36px;">Web Developing · Gachon University · Department of Computer Science</p>
+  <p style="margin-top:8px;">Mukhammadamin · Abdulazizbek · Asadbek</p>
+</section>
+
+<!-- 2. Problem & solution -->
+<section class="slide">
+  <span class="kicker">Overview</span>
+  <h2>The problem and our solution</h2>
+  <div class="grid2">
+    <div class="card">
+      <div class="ic">⏳</div>
+      <h3>The problem</h3>
+      <ul>
+        <li>Planning a trip takes hours across blogs, maps, and booking sites.</li>
+        <li>Generic itineraries ignore a traveler's budget and interests.</li>
+        <li>Plans end up scattered in notes, screenshots, and tabs.</li>
+      </ul>
+    </div>
+    <div class="card" style="border-color:#2563eb;">
+      <div class="ic">✨</div>
+      <h3>Our solution</h3>
+      <ul>
+        <li>An AI planner that builds a day-by-day itinerary in under a minute.</li>
+        <li>Plans shaped by destination, trip length, budget, and interests.</li>
+        <li>A personal dashboard to save trips and favorites.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="num">02</span>
+</section>
+
+<!-- 3. Features -->
+<section class="slide">
+  <span class="kicker">Core features</span>
+  <h2>What the platform does</h2>
+  <div class="grid4">
+    <div class="card"><div class="ic">🧭</div><h3>AI planning</h3><p>Personalized itineraries based on interests, time, and budget.</p></div>
+    <div class="card"><div class="ic">💰</div><h3>Smart budgeting</h3><p>An estimated budget shown before planning, so users travel with confidence.</p></div>
+    <div class="card"><div class="ic">🎯</div><h3>Personalization</h3><p>Food, nature, culture, shopping, sports: users choose what they love.</p></div>
+    <div class="card"><div class="ic">🔖</div><h3>Saved trips</h3><p>User accounts keep favorite plans ready to reopen anytime.</p></div>
+  </div>
+  <p style="margin-top:34px;">Plus: a destination slider, a <b>"Surprise Me"</b> option for undecided travelers, light and dark mode, and a fully responsive layout.</p>
+  <span class="num">03</span>
+</section>
+
+<!-- 4. How it works -->
+<section class="slide">
+  <span class="kicker">User flow</span>
+  <h2>How it works</h2>
+  <div class="grid4">
+    <div class="card"><div class="step">1</div><h3>Pick a destination</h3><p>Choose a dream place, or let AI suggest somewhere new.</p></div>
+    <div class="card"><div class="step">2</div><h3>Share your style</h3><p>Enter days, budget, and interests.</p></div>
+    <div class="card"><div class="step">3</div><h3>AI builds the plan</h3><p>A day-by-day itinerary with places, timing, and estimated cost.</p></div>
+    <div class="card"><div class="step">4</div><h3>Save and go</h3><p>Keep trips in the dashboard and open them anytime.</p></div>
+  </div>
+  <span class="num">04</span>
+</section>
+
+<!-- 5. Team -->
+<section class="slide">
+  <span class="kicker">Team 19</span>
+  <h2>Our team and roles</h2>
+  <div class="grid3">
+    <div class="card" style="text-align:center;">
+      <div class="avatar" style="margin-inline:auto; background:linear-gradient(135deg,#3b82f6,#6366f1);">M</div>
+      <h3>Mukhammadamin</h3><p>202537558</p>
+      <span class="role">Backend Developer</span>
+      <p>Server logic, REST API, and the PostgreSQL database.</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="avatar" style="margin-inline:auto; background:linear-gradient(135deg,#6366f1,#a855f7);">A</div>
+      <h3>Abdulazizbek</h3><p>202537225</p>
+      <span class="role">Frontend Developer</span>
+      <p>React interface, routing, and connecting the UI to the API.</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="avatar" style="margin-inline:auto; background:linear-gradient(135deg,#ec4899,#f97316);">A</div>
+      <h3>Asadbek</h3><p>202537228</p>
+      <span class="role">Designer</span>
+      <p>Visual identity, page layouts, and the user experience.</p>
+    </div>
+  </div>
+  <span class="num">05</span>
+</section>
+
+<!-- 6. Tech -->
+<section class="slide">
+  <span class="kicker">Technologies</span>
+  <h2>Architecture and tech stack</h2>
+  <div class="arch">
+    <div class="box"><b>React Frontend</b><span>Vite · Tailwind CSS · Framer Motion · React Router</span></div>
+    <div class="arrow">⇄</div>
+    <div class="box"><b>REST API</b><span>Backend server and AI plan generation</span></div>
+    <div class="arrow">⇄</div>
+    <div class="box"><b>PostgreSQL</b><span>Users, saved trips, favorites</span></div>
+  </div>
+  <div class="tags">
+    <span>React</span><span>PostgreSQL</span><span>REST API</span><span>Vite</span><span>Tailwind CSS</span><span>Framer Motion</span><span>React Router</span><span>GitHub Pages</span>
+  </div>
+  <p style="margin-top:28px;">The platform is deployed and available to users worldwide.</p>
+  <span class="num">06</span>
+</section>
+
+<!-- 7. Interface -->
+<section class="slide">
+  <div style="display:grid; grid-template-columns: 1fr 1.9fr; gap:40px; align-items:center; height:100%;">
+    <div>
+      <span class="kicker">Interface</span>
+      <h2>The live platform</h2>
+      <p>Full-screen destination slider, glass-style navigation, and a clear call to action on every screen.</p>
+      <p style="margin-top:18px;"><b>bahriddinoff01.github.io/ai-travel-planner</b></p>
+    </div>
+    <img class="shot" src="../assets/shots/home.png" alt="AI Travel Planner home page" />
+  </div>
+  <span class="num">07</span>
+</section>
+
+<!-- 8. Timeline -->
+<section class="slide">
+  <span class="kicker">Development timeline</span>
+  <h2>About one month, start to launch</h2>
+  <div class="tl">
+    <div><div class="dot"></div><span class="when">Week 1</span><h3>The idea</h3><p>Defined the problem, scoped features, and mapped the user flow.</p></div>
+    <div><div class="dot"></div><span class="when">Week 1–2</span><h3>Design</h3><p>Sketched every screen and set the visual style.</p></div>
+    <div><div class="dot"></div><span class="when">Week 2–4</span><h3>Build</h3><p>React frontend and a PostgreSQL-backed backend, from scratch.</p></div>
+    <div><div class="dot"></div><span class="when">Week 4</span><h3>Launch</h3><p>Tested, fixed, and deployed live for anyone to use.</p></div>
+  </div>
+  <span class="num">08</span>
+</section>
+
+<!-- 9. Thank you -->
+<section class="slide photo" style="background-image:url('../assets/road.jpg'); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+  <h1 style="font-size:60pt;">Thank you</h1>
+  <p style="font-size:18pt; margin-top:18px; color:#dbe4f3;">Try it live: <b>bahriddinoff01.github.io/ai-travel-planner</b></p>
+  <p style="margin-top:28px;">Team 19 · Web Developing · Gachon University</p>
+</section>
+
+</body>
+</html>
